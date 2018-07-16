@@ -577,8 +577,8 @@ possible. There are limited number of hirable positions available, and
 bigger supply of people available to the market at any given time.
 
     8.) \textbf{For each category, what is the average position of the
-Tasker who is hired?} although not clear, assumed the question clearly
-wants the average of numerical position per category
+Tasker who is hired?} Answered with the assumption the question wants
+the average of the numerical position per category
 
     \begin{Verbatim}[commandchars=\\\{\}]
 {\color{incolor}In [{\color{incolor}78}]:} \PY{n}{data}\PY{o}{.}\PY{n}{groupby}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{category}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{o}{.}\PY{n}{position}\PY{o}{.}\PY{n}{mean}\PY{p}{(}\PY{p}{)}
@@ -593,8 +593,8 @@ wants the average of numerical position per category
          Name: position, dtype: float64
 \end{Verbatim}
             
-    9.) For each category, what is the average hourly rate and average
-number of completed tasks for the Taskers who are hired?
+    9.) \textbf{For each category, what is the average hourly rate and
+average number of completed tasks for the Taskers who are hired?}
 
     \begin{Verbatim}[commandchars=\\\{\}]
 {\color{incolor}In [{\color{incolor}82}]:} \PY{c+c1}{\PYZsh{}avereage hourly rate}
@@ -624,10 +624,20 @@ number of completed tasks for the Taskers who are hired?
          Name: num\_completed\_tasks, dtype: float64
 \end{Verbatim}
             
-    10.) Based on the previous, how would you approach the question of: How
-can we use market data to suggest hourly rates to Taskers that would
-maximize their opportunity to be hired? Please describe in detail, with
-code and formulas that support your model.
+    10.) \textbf{Based on the previous, how would you approach the question
+of: How can we use market data to suggest hourly rates to Taskers that
+would maximize their opportunity to be hired? Please describe in detail,
+with code and formulas that support your model.}
+
+    2 methods that come to mind * 1st would be to gather data on the range
+of values to calculate standard deviation and the average rate at which
+taskers get hired and give task-seekers a market range in which they are
+most likely to get hired. * 2nd would be to create a machine learning
+prediction model (decision tree-based or something as simple as
+multivariate logistic regression) that can use past data to predict a
+binary classification of whether a tasker will get hired or not hired
+based on tasker's input of hourly rate and category they are working
+for.
 
 
     % Add a bibliography block to the postdoc
